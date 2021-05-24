@@ -1,2 +1,2 @@
 # Slinix
- An app for everything.
+ An app for everything - BY Authyn.com
