@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link
+      rel="shortcut icon"
+      href="{% static 'favicon.ico'%}"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <h1>Latest Technology News</h1>
+    <div class="content">
+      {% for key, value in headlines_data.items %}
+      <div class="card">
+        {{ key }}
+
+        <form action="read" method="post">
+          {% csrf_token %}
+          <input type="text" name="headline" value="{{ key }}" class="hide" />
+          <input
+            type="text"
+            name="read_link"
+            value="{{ value }}"
+            class="hide"
+          />
+          <input type="submit" class="submit-btn" value="Read more" />
+        </form>
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>

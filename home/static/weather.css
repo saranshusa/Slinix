@@ -1,0 +1,415 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+::placeholder {
+  color: #a1a1a1;
+  opacity: 1;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  font-family: "Roboto Mono", monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: white;
+  font-family: "Roboto Mono", monospace;
+}
+
+.main-app {
+  display: flex;
+  background-color: #0b0b0b;
+  min-height: 100vh;
+}
+
+.app {
+  height: calc(100vh - 80px);
+  position: relative;
+  top: 40px;
+  left: 50px;
+  max-width: 22vw;
+  border-radius: 70px;
+  background-color: #1b1b1b;
+  min-width: 352px;
+  margin-right: 100px;
+}
+
+.temp {
+  margin-top: -15px;
+  display: flex;
+  justify-content: center;
+}
+
+.temp p {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.status {
+  text-align: center;
+}
+
+.status-icon {
+  margin-left: 15px;
+  width: 20px;
+}
+
+.details {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.weather-icon {
+  width: 60%;
+}
+
+.pin-icon {
+  width: 14px;
+}
+
+.search {
+  margin-top: 35px;
+  text-align: center;
+}
+
+.search input {
+  color: rgb(179, 179, 179);
+  max-width: 300px;
+  width: 80%;
+  height: 50px;
+  background-color: #343434;
+  border: none;
+  border-radius: 25px;
+  padding-left: 0px;
+  letter-spacing: 1px;
+  font-size: 15px;
+  font-family: "IBM Plex Sans Thai Looped", sans-serif;
+  text-align: center;
+}
+
+.search input:focus {
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  right: 15%;
+  margin-top: 14px;
+  width: 21px;
+}
+
+/* App2 */
+
+.app2 {
+  display: flex;
+  position: relative;
+  width: calc(100vw - 452px);
+}
+
+.app2-left {
+  font-family: "Roboto", sans-serif;
+  padding: 50px 25px 50px 25px;
+  max-height: 100%;
+  width: 50%;
+  background-color: #0b0b0b;
+  min-width: 445px;
+}
+
+.app2-right {
+  padding: 50px 25px 50px 25px;
+  max-height: 100%;
+  width: 50%;
+  background-color: #0b0b0b;
+  max-width: 400px;
+}
+
+.clock {
+  display: inline-flex;
+  font-family: "Roboto", sans-serif;
+  font-size: 3.25rem;
+  font-weight: 600;
+  color: #00ffc2;
+}
+
+.clock .city {
+  margin-left: 1em;
+  padding-top: 2rem;
+  font-size: 1rem;
+  letter-spacing: 1.25px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+.day {
+  letter-spacing: 1.25px;
+  color: #79797f;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.date {
+  letter-spacing: 1.25px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+}
+
+.clock svg {
+  margin-left: 5px;
+  padding-top: calc(1.5rem);
+}
+
+.metrics {
+  margin-top: 2em;
+}
+
+.metrics-icon {
+  height: 1.25em;
+  width: 1.25em;
+}
+
+.metrics-row {
+  position: relative;
+  max-height: 1.25em;
+  margin: 15px 0;
+  padding: 15px 10px;
+  border-radius: 25px;
+  background-color: #1b1b1b;
+  display: flex;
+}
+
+.metrics-head {
+  margin-left: 0.5em;
+  font-size: 1.15rem;
+}
+
+.metrics-body {
+  width: 230px;
+  display: flex;
+  position: absolute;
+  right: 0;
+  text-align: left;
+}
+
+.metrics-bar {
+  height: 15px;
+  margin: 0 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  min-width: 100px;
+  background-color: #203d37;
+  border-radius: 25px;
+}
+
+.metrics-bar-sub {
+  width: 0%;
+  background-color: #17ebc5;
+  border-radius: 25px;
+}
+
+.wind p {
+  margin-left: 10px;
+}
+
+.summary-cards {
+  display: flex;
+  overflow-x: auto;
+  margin-top: 2em;
+}
+
+.feels-like {
+  margin: 0 15px 0 auto;
+  font-size: 1.25rem;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 120px;
+  min-width: 110px;
+  max-height: 150px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 168, 0, 0.94) 0%,
+    rgba(250, 85, 85, 0.76) 100%
+  );
+}
+
+.feel-text {
+  margin-top: 5px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.feel-temp {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+.tomorrow,
+.after-tomorrow {
+  text-align: center;
+  font-size: 1.25rem;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 100px;
+  min-width: 80px;
+  height: 10em;
+  max-height: 150px;
+  font-family: "Overpass", sans-serif;
+}
+
+.tomorrow-temp,
+.after-tomorrow-temp {
+  margin-top: 15px;
+}
+
+.tomorrow {
+  margin: 0 15px 0 auto;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.after-tomorrow {
+  margin: 0 auto;
+  background: linear-gradient(
+    180deg,
+    #14a389 0%,
+    rgba(20, 163, 137, 0.28) 100%
+  );
+}
+
+/* App Right CSS */
+
+.lamp {
+  height: 100px;
+}
+
+.sun {
+  font-family: "Roboto", sans-serif;
+  margin-top: 2em;
+}
+
+.sunrise {
+  position: relative;
+  display: flex;
+  min-height: 3em;
+  max-height: 3.25em;
+  max-width: 100%;
+  margin: 10px;
+  margin-bottom: 25px;
+  background: linear-gradient(
+    90deg,
+    rgba(165, 215, 236, 0.59) 0%,
+    rgba(0, 178, 255, 0.88) 55.21%
+  );
+  border-radius: 15px;
+  padding: 12px;
+}
+
+.sunset {
+  position: relative;
+  display: flex;
+  min-height: 3em;
+  max-height: 3.25em;
+  max-width: 100%;
+  margin: 10px;
+  background: linear-gradient(90deg, #f54747 0%, #ffc329 100%);
+  border-radius: 15px;
+  padding: 12px;
+  margin-bottom: 50px;
+}
+
+.sun-head {
+  padding: 10px 0;
+  padding-left: 10px;
+  font-size: 1.25rem;
+}
+
+.sun-time {
+  margin-right: 10px;
+  padding: 10px 0;
+  padding-right: 25px;
+  font-size: 1.25rem;
+  position: absolute;
+  right: 0;
+}
+
+.sun-icon {
+  position: relative;
+  top: 3px;
+  margin-left: 15px;
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.show-hourly {
+  position: relative;
+  display: flex;
+  min-height: 3em;
+  max-height: 3.25em;
+  max-width: 100%;
+  margin: 10px;
+  background: linear-gradient(
+    180deg,
+    #14a389 0%,
+    rgba(20, 163, 137, 0.28) 100%
+  );
+  border-radius: 15px;
+  padding: 12px;
+}
+
+.hourly-icon {
+  position: relative;
+  top: 5px;
+  margin-left: 15px;
+  height: 2rem;
+  width: 2rem;
+}
+
+.cat-image {
+  position: absolute;
+  width: 20vw;
+  right: 2px;
+  bottom: 1px;
+}
+
+.lamp-image {
+  position: absolute;
+  height: 160px;
+  right: 25px;
+  top: 1px;
+}
+
+@media (max-width: 479px) {
+  .main-app {
+    background-color: tomato;
+  }
+
+  .app {
+    top: 10px;
+    left: 10px;
+    min-height: calc(100vh - 20px);
+    max-width: calc(100vw - 20px);
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1274px) {
+  .app2-right {
+    display: none;
+  }
+
+  .app2-left {
+    width: 100%;
+  }
+}

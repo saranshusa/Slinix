@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora&display=swap");
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #8eeccd;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  border: 5px solid transparent;
+  background-clip: content-box;
+  background-color: #00d49f;
+}
+
+body {
+  background-color: #c3ffeb;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: "Sora", sans-serif;
+  border-bottom: solid 3px rgb(2, 139, 94);
+  margin: 20px;
+  padding-bottom: 10px;
+}
+
+.card {
+  font-size: 1.3em;
+  font-weight: 600;
+  font-family: "Roboto Mono", monospace;
+  width: 40vw;
+  background-color: aquamarine;
+  padding: 10px;
+  margin: 10px;
+}
+
+.card:hover {
+  background-color: rgb(83, 255, 198);
+}
+
+.submit-btn {
+  border-radius: 25px;
+  border: none;
+  padding: 5px;
+  background-color: aquamarine;
+}
+
+.submit-btn:hover {
+  background-color: rgb(83, 255, 198);
+}
+
+.hide {
+  display: none;
+}
+
+@media (max-width: 479px) {
+  .card {
+    width: 90vw;
+  }
+}
